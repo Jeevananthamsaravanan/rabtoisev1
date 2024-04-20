@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "Satoshi-VariableItalic";
+  src: url("./Fonts/satoshi/Satoshi-VariableItalic.woff2") format("woff2"),
+    url("./Fonts/satoshi/Satoshi-VariableItalic.woff") format("woff"),
+    url("./Fonts/satoshi/Satoshi-VariableItalic.ttf") format("truetype");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Light";
+  src: url("./Fonts/satoshi/Satoshi-Light.woff2") format("woff2"),
+    url("./Fonts/satoshi/Satoshi-Light.woff") format("woff"),
+    url("./Fonts/satoshi/Satoshi-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-LightItalic";
+  src: url("./Fonts/satoshi/Satoshi-LightItalic.woff2") format("woff2"),
+    url("./Fonts/satoshi/Satoshi-LightItalic.woff") format("woff"),
+    url("./Fonts/satoshi/Satoshi-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Regular";
+  src: url("./Fonts/satoshi/Satoshi-Regular.woff2") format("woff2"),
+    url("./Fonts/satoshi/Satoshi-Regular.woff") format("woff"),
+    url("./Fonts/satoshi/Satoshi-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-Italic";
+  src: url("./Fonts/satoshi/Satoshi-Italic.woff2") format("woff2"),
+    url("./Fonts/satoshi/Satoshi-Italic.woff") format("woff"),
+    url("./Fonts/satoshi/Satoshi-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Medium";
+  src: url("./Fonts/satoshi/Satoshi-Medium.woff2") format("woff2"),
+    url("./Fonts/satoshi/Satoshi-Medium.woff") format("woff"),
+    url("./Fonts/satoshi/Satoshi-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-MediumItalic";
+  src: url("./Fonts/satoshi/Satoshi-MediumItalic.woff2") format("woff2"),
+    url("./Fonts/satoshi/Satoshi-MediumItalic.woff") format("woff"),
+    url("./Fonts/satoshi/Satoshi-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Bold";
+  src: url("./Fonts/satoshi/Satoshi-Bold.woff2") format("woff2"),
+    url("./Fonts/satoshi/Satoshi-Bold.woff") format("woff"),
+    url("./Fonts/satoshi/Satoshi-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-BoldItalic";
+  src: url("./Fonts/satoshi/Satoshi-BoldItalic.woff2") format("woff2"),
+    url("./Fonts/satoshi/Satoshi-BoldItalic.woff") format("woff"),
+    url("./Fonts/satoshi/Satoshi-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Black";
+  src: url("./Fonts/satoshi/Satoshi-Black.woff2") format("woff2"),
+    url("./Fonts/satoshi/Satoshi-Black.woff") format("woff"),
+    url("./Fonts/satoshi/Satoshi-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-BlackItalic";
+  src: url("./Fonts/satoshi/Satoshi-BlackItalic.woff2") format("woff2"),
+    url("./Fonts/satoshi/Satoshi-BlackItalic.woff") format("woff"),
+    url("./Fonts/satoshi/Satoshi-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+.satoshi-variable {
+  font-family: "Satoshi-Variable", Arial, sans-serif;
+}
+
+.satoshi-light {
+  font-family: "Satoshi-Light", Arial, sans-serif;
+}
+
+.satoshi-regular {
+  font-family: "Satoshi-Regular", Arial, sans-serif;
+}
+
+.satoshi-medium {
+  font-family: "Satoshi-Medium", Arial, sans-serif;
+}
+.satoshi-bold {
+  font-family: "Satoshi-Bold", Arial, sans-serif;
+}
+.satoshi-black {
+  font-family: "Satoshi-Black", Arial, sans-serif;
+}
+
+
+.button-one {
+  background-color: transparent;
+  /* border: 1px solid black; */
+  color: black;
+  text-align: center;
+  line-height: 50px; /* Center the text vertically */
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s; /* Transition for background color change */
+}
+
+.button-one::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: #cd2100;
+  clip-path: circle(0% at 52% 100%); /* Initial clip-path for semi-ellipse */
+  transition: clip-path 0.5s, background-color 0.5s; /* Transition for clip-path and background color change */
+  z-index: -1; /* Ensure it's behind the button */
+}
+
+.button-one:hover::before {
+  clip-path: circle(112% at 50% 100%); /* Clip-path for full ellipse */
+  background-color: #cd2100; /* Change background color to orange */
+  color: white;
+}
+
+.button-two {
+  background-color: #cd2100;
+  /* border: 1px solid black; */
+  color: white;
+  text-align: center;
+  line-height: 50px; /* Center the text vertically */
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s; /* Transition for background color change */
+}
+
+.button-two::before {
+  content: "Contact Us";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  clip-path: circle(0% at 52% 100%); /* Initial clip-path for semi-ellipse */
+  transition: clip-path 0.5s, background-color 0.5s; /* Transition for clip-path and background color change */
+  z-index: 0; /* Ensure it's behind the button */
+}
+
+.button-two:hover::before {
+  clip-path: circle(112% at 50% 100%); /* Clip-path for full ellipse */
+  background-color: white; /* Change background color to orange */
+}
