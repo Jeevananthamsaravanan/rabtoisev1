@@ -2,6 +2,7 @@ import React from 'react'
 import { BsTelephoneFill } from 'react-icons/bs'
 import { FaFacebookSquare, FaInstagramSquare, FaLinkedin, FaMapMarker, FaYoutubeSquare } from 'react-icons/fa'
 import { IoMdCall, IoMdMail } from 'react-icons/io'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
 
@@ -12,9 +13,9 @@ const Footer = () => {
   return (
     <div className=' px-10 pt-20 relative  bg-black w-[100%]' id='contactus'>
          <div className='flex flex-col gap-12 md:flex-row items-start justify-start w-[100%]'>
-              <div className='w-[100%] md:w-1/3 flex items-start'>
+              <Link to="/" className='w-[100%] md:w-1/3 flex items-start'>
                 <img src="./footerlogo.png" alt="" className='w-[200px]' />
-              </div>
+              </Link>
               <div className='w-[100%] satoshi-medium  md:w-1/3 flex flex-col gap-5 text-white text-[18px] lg:px-10  '>
                 <div className='text-[20px]'>Contact Us</div>
                    

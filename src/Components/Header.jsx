@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -15,7 +16,7 @@ let transistion = { duration:1};
   return (
     
     <div className=' sticky bg-white left-0 right-0 z-50 top-0 flex items-center overflow-hidden justify-between w-[100%] px-5 md:px-10 py-5 '>
-        <motion.div initial={{opacity:0,scale:0.5}} animate={{opacity:1,scale:1}} transition={{duration:1}} className=''> <img className="w-[120px] sm:w-[200px]" src='./headerlogo.png'/> </motion.div>
+        <motion.div initial={{opacity:0,scale:0.5}} animate={{opacity:1,scale:1}} transition={{duration:1}} className=''> <Link to="/"> <img className="w-[120px] sm:w-[200px]" src='./headerlogo.png'/> </Link> </motion.div>
         <motion.div variants={variations} initial='horizontalalinitialization' animate='horizontalAnimations' transition={transistion} className='flex mt-2 md:flex items-center  justify-center gap-3 md:gap-10' >
             <a target='_blank' href='https://www.linkedin.com/company/rabtoise'><img src="./linkedin.webp"  alt="" className="w-[20px]  rounded-[3px]" /></a>
             <a target='_blank' href='https://www.facebook.com/profile.php?id=61558620061065'><img src="./facebook.webp" alt="" className="sm:w-[20px] w-[18px]  rounded-[3px]" /></a>
