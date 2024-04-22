@@ -12,8 +12,7 @@ function App() {
       <Header />
       <Routes>
          <Route path="/" element={<Home/>} />
-         <Route path="/error404" element={<Error404 />} />
-         <Route path="*" element={<Navigate to="/error404" />} />
+         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
      </Suspense> 
