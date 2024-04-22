@@ -10,7 +10,7 @@ import WhyUs from "../Components/WhyUs";
 import AboutUs from "../Components/Aboutus";
 import Testimonials from "../Components/Testimonials";
 import SEO from "../Components/seo/Seo";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Home() {
     let { pathname } = useLocation();
@@ -22,9 +22,10 @@ function Home() {
         titleTemplate={title}
         description={description}
       />
+      <Link to="/pafe" className="text-[30px] text-center">Error 404</Link>
+
       <div className="relative">
         
-      
 
         <Herosection />
 
