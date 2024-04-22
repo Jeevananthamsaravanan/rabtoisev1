@@ -1,41 +1,22 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState ,Suspense ,lazy } from "react";
+import { Routes ,Route, Navigate  } from "react-router-dom"
 import Header from "./Components/Header";
-import Herosection from "./Components/Herosection";
-import Service from "./Components/Service";
-import Technologies from "./Components/Technologies";
 import Footer from "./Components/Footer";
-import Bottom from "./Components/Bottom";
-import FAQS from "./Components/FAQS";
-import WhyUs from "./Components/WhyUs";
-import AboutUs from "./Components/Aboutus";
-import Testimonials from "./Components/Testimonials";
+import Loading from "./Pages/Loading";
+const Home = lazy(()=>import('./Pages/Home')); 
+const Error404 = lazy(()=>import('./Pages/Error404')); 
 
 function App() {
-  return (
-    <Fragment>
-      <div className="relative">
-        <Header />
-
-        <Herosection />
-
-        <AboutUs />
-
-        <Technologies />
-
-
-        <Service />
-
-        <Testimonials/>
-
-        <WhyUs />
-
-        <FAQS />
-
-        <Bottom />
-
-        <Footer />
-      </div>
-    </Fragment>
+  return (   
+     <Suspense fallback={<Loading />}>
+      <Header />
+      <Routes>
+         <Route path="/" element={<Home/>} />
+         <Route path="/error404" element={<Error404 />} />
+         <Route path="*" element={<Navigate to="/error404" />} />
+      </Routes>
+      <Footer />
+     </Suspense> 
   );
 }
 
