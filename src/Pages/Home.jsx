@@ -19,11 +19,10 @@ function Home() {
   return (
     <Fragment>
          <SEO
-        titleTemplate={title}
-        description={description}
-      />
-      <Link to="/pafe" className="text-[30px] text-center">Error 404</Link>
-
+          titleTemplate={title}
+          description={description}
+         />
+    
       <div className="relative">
         
 
